@@ -1,30 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace WinFormsApp2
+﻿namespace WinFormsApp2
 {
     public partial class rectangleareaform : Form
     {
         public rectangleareaform()
         {
             InitializeComponent();
+            label1.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var width = Convert.ToDouble(textBox1.Text);
-            var length = Convert.ToDouble(textBox2.Text);
-            label1.Text = Convert.ToString(width * length);
-
+            CalculateIt();
         }
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            CalculateIt();
+        }
+        private void textBox2_KeyUp(object sender, KeyEventArgs e)
+        {
+            CalculateIt();
+        }
+
+
+
+        private void CalculateIt()
+        {
+            // Check if text boxes contain numeric values 
+            if (IsANumber(textBox1.Text) && IsANumber(textBox2.Text))
+            {
+                // Create rectangle object and set sides
+                var r = new Rectangle();
+                r.SetSideA(textBox1.Text);
+                r.SetSideB(textBox2.Text);
+
+                // Display area
+                label1.Text = r.GetArea().ToString();
+            }
+        }
+
+        public bool IsANumber(string s)
+        {
+            return double.TryParse(s, out _);
+        }
+
     }
 }
