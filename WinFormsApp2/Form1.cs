@@ -14,19 +14,19 @@ namespace WinFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var newform = new squareareaform();
+            var newform = new Form2();
             newform.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var newform = new rectangleareaform();
+            var newform = new Form3();
             newform.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var newform = new triangleareaform();
+            var newform = new Form4();
             newform.Show();
         }
 

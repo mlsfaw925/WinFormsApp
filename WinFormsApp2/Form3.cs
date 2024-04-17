@@ -1,29 +1,22 @@
 ﻿namespace WinFormsApp2
 {
-    public partial class rectangleareaform : Form
+    public partial class Form3 : Form
     {
-        public rectangleareaform()
+        public Form3()
         {
             InitializeComponent();
             label1.Text = "";
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            CalculateIt();
-        }
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
-            CalculateIt();
+            UpdateValue();
         }
         private void textBox2_KeyUp(object sender, KeyEventArgs e)
         {
-            CalculateIt();
+            UpdateValue();
         }
 
-
-
-        private void CalculateIt()
+        private void UpdateValue()
         {
             // Check if text boxes contain numeric values 
             if (IsANumber(textBox1.Text) && IsANumber(textBox2.Text))

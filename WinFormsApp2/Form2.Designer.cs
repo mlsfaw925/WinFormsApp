@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp2
 {
-    partial class squareareaform
+    partial class Form2
     {
         /// <summary>
         /// Required designer variable.
@@ -80,7 +80,7 @@
             label2.TabIndex = 4;
             label2.Text = "side";
             // 
-            // squareareaform
+            // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -88,7 +88,7 @@
             Controls.Add(label2);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(button1);
-            Name = "squareareaform";
+            Name = "Form2";
             Text = "Form2";
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();

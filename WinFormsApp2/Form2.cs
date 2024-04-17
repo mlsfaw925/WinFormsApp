@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WinFormsApp2
 {
-    public partial class squareareaform : Form
+    public partial class Form2 : Form
     {
-        public squareareaform()
+        public Form2()
         {
             InitializeComponent();
         }
